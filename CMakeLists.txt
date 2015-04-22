@@ -2,6 +2,13 @@ CMAKE_MINIMUM_REQUIRED(VERSION 3.5)
 
 SET(CMAKE_MODULE_PATH ${CMAKE_CURRENT_SOURCE_DIR}/CMakeModules)
 
+###############
+# ASI default settings
+list(APPEND CMAKE_MODULE_PATH "$ENV{ASV_CMAKE}")
+include(asv_cmake_defaults)
+asv_cmake_defaults( )
+###############
+
 set(LIB_MAJOR_VERSION "1")
 set(LIB_MINOR_VERSION "1")
 set(LIB_PATCH_VERSION "0")
